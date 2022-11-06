@@ -1,10 +1,10 @@
 package routes
 
 import (
+	"log"
+
 	"github.com/gin-gonic/gin"
-	productcontroller "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/input/web/controllers/product"
-	productrepository "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/output/persistence/product"
-	productservice "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/domain/service/product"
+	productcontrollerfactory "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/input/web/controller/factory/product"
 )
 
 type Routes struct {
@@ -12,11 +12,16 @@ type Routes struct {
 }
 
 func (r *Routes) LoadRoutes() (err error) {
-	findProductRepository := productrepository.NewFindProductRepository()
-	findProductService := productservice.NewFindProductService(findProductRepository)
-	findProductController := productcontroller.NewFindProductController(findProductService)
-
 	rest := r.Router.Group("/hex-go")
-	rest.GET("/v1/products/:id", findProductController.ById)
+
+	addFindProductController(rest)
 	return
+}
+
+func addFindProductController(rest *gin.RouterGroup) {
+	findProductController, err := productcontrollerfactory.GetFindProductController()
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
+	rest.GET("/v1/products/:id", findProductController.ById)
 }
