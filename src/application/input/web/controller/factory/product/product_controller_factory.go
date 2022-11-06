@@ -14,7 +14,7 @@ func GetFindProductController() (productcontroller.IFindProductController, error
 	controller := productcontroller.NewFindProductController(service)
 
 	if controller == nil {
-		return nil, fmt.Errorf("error getting find product controller")
+		return nil, fmt.Errorf("error getting: find_product_controller")
 	}
 
 	return controller, nil
