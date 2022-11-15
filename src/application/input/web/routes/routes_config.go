@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	productcontrollerfactory "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/input/web/controller/factory/product"
+	productcontrollerfactory "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/input/web/controller/product/factory"
 )
 
 type Routes struct {

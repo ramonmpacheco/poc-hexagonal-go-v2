@@ -5,5 +5,5 @@ import (
 )
 
 type FindProductUseCase interface {
-	ById(id string) (productdomain.Product, error)
+	ById(id string) (*productdomain.Product, error)
 }
