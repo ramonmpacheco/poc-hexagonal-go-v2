@@ -5,12 +5,13 @@ import (
 
 	productcontroller "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/input/web/controller/product"
 	productrepository "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/output/persistence/product"
-	productservice "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/domain/port/input/product"
+	mongoclient "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/config/db"
+	productusecaseimpl "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/domain/port/input/product/impl"
 )
 
 func GetFindProductController() (productcontroller.IFindProductController, error) {
-	repository := productrepository.NewFindProductRepository()
-	findProductUseCase := productservice.NewFindProductUseCaseImpl(repository)
+	repository := productrepository.NewFindProductRepository(mongoclient.Client)
+	findProductUseCase := productusecaseimpl.NewFindProductUseCaseImpl(repository)
 	controller := productcontroller.NewFindProductController(findProductUseCase)
 
 	if controller == nil {

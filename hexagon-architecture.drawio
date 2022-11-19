@@ -1,1 +1,64 @@
-<mxfile host="app.diagrams.net" modified="2022-11-13T17:19:56.565Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" etag="MJFLmfm7DVIhLIbpVqXm" version="20.5.3" type="device"><diagram id="n82wr6HyWtuxYF5H4FkH" name="hex-arch">7ZlRc6M2EMc/TR7LIAkEPMZxfNc27WTO07neU0cxiq2rQIwQidNPXwmEDQif7VxIbm7Ci9EiJNif/rsrfIGusu0HSYrNHyKl/AL66fYCzS+gPkCgf4zlqbEAEIPGspYstba9Ycn+o9boW2vFUlr2OiohuGJF37gSeU5XqmcjUorHfrd7wfuzFmRNHcNyRbhr/cxStWmsMYz29o+UrTftzAAnzZWMtJ3tm5QbkorHjgldX6ArKYRqzrLtFeXGe61fmvsWB67uHkzSXJ1yw28x/PTP73/+9esHzotVnC6D5ZdfAG6GeSC8sm9sn1Y9tS7Qw2hv68bsccMUXRZkZa48auLatlEZ1y2gT0lZNAju2ZbqWWf3jPMrwYWsB0IziPFCP97MzkmlotuDbwN2PtKri4qMKvmku7Q3INTcYhcW8u1Ke9xTCjHwIjvypgOpayd2fax3M+xdqE+sF8/xaHDco3opFOZ0Q7dkLXLtkYJKpuencm+9bU3wuOdrh1vxnEJisYh93zd2kasFyRg3brypViwl+lGvRF4K87D19aV9cPAC2DQoDyf+/uhTDMLEi0MHJIp9DwUuSBj6E1GEPyTEY7D6kBFKkpeSG4wSD4d9Vgn2sCs6iGMvgC4rEGEvQFOJDjh4pKjy1Lhtbta5kGojNA/Cb4QorIO/UqWerMNJpcQAxxFvNzPS1MkfR30qKSeKPfTvG/OJvfVWMD3ijgUKtOMxRCAyCVZLKOhxCXHkwRAFOsqhCERg4PNSVHJF7ZDddDGcJdJBMo5w5MMgAjjqww+j0AtjswiQD2IcDl5CEbmmypmkZrtzxPNxI0edLC8q5ayBfvRCM07uKL8VJVPMCHYum+U5M9JgOuffDK5nLE1r1oSztTFwet/tf2nNu36lFjfL1zd1t7nRvBSK2NF0rj0t4PYCtTleSMNJ4IEBRr2URuJtW3z19DtVqD0hXxZmIVF5/aDftLQsDzG7E0qJzLBo6y2j/5SUm10waGmuaF4H667qh2iViRazNtZn27Wpcz3KdWSWpp+XsXKl35LkVFSlR1JSNGN2wYcnh5PvAxxCBzCCowl1BDCcCnDsABaVeo5cB+o7qtahvM+U6ynUJpRrCB25YhC+uVyTn1+uCXodvYaBTqI42R8D2OO18GtKF4zsBnXB04o0FzmtfTdxqUW3TP1thveSKLDtL3U7grY539rp68ZTp3HbqcqNrVRS/LvbzJvpad6W3bi+TqTqtL9WWdFpvlnZF4SmINvvnEB/tfjQCwJnLZ1b9QURcoKOv68RXqm+a4NXJ8jMRUZYrm2fKk5Ld1U+/xvFK++AkfZwHHZA4UFFFoypPh5RfTyZ6t36unX/wO3aDarv30ZdbUq0AaK7MbUmJ6gfTNJjQPsR5zyEkyZtFCXfpOuPJnAcu3TRZHRDh+5lUXDt+zr/wcVlkxRdkb3THtJGged3YCdRj/aBr1lAm8ORz5LTEY8c4tdbzUGnaG39LCRPf3LWdT/7ZS14IfbxN+M4ikbjOB6J49Nxd3deH5Uq3lmfyxpg5OH4oM5Df3ST/bqs3X3ZnChyR3RR9M77TN7Yj73BPxMYxm/OGLqZ+z2OTxzHo/Ec/kLcdXP/B3Cze9r/j46u/wc=</diagram></mxfile>
+<mxfile host="65bd71144e">
+    <diagram id="n82wr6HyWtuxYF5H4FkH" name="hex-arch">
+        <mxGraphModel dx="664" dy="552" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#B266FF;" parent="1" vertex="1">
+                    <mxGeometry x="133" y="304" width="561.71" height="561.71" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-14" value="" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;aspect=fixed;fillColor=#FF8000;fontFamily=Lucida Console;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="223.69000000000003" y="459.85" width="380.34" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-2" value="" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;aspect=fixed;fontFamily=Lucida Console;fillColor=#3399FF;" parent="1" vertex="1">
+                    <mxGeometry x="279.65" y="496.64" width="268.42" height="176.43" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-11" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Lucida Console;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="346.66231722210034" y="567.2534561371713" as="sourcePoint"/>
+                        <mxPoint x="371.7876702471675" y="575.5822493018651" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-3" value="input" style="fontStyle=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=2;rotation=16;fontFamily=Lucida Console;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="294.15" y="546.85" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-4" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.miscellaneous.adapter;rotation=15;fontFamily=Lucida Console;" parent="1" vertex="1">
+                    <mxGeometry x="266.15" y="536.85" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-8" value="output" style="fontStyle=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;spacingLeft=2;rotation=15;fontFamily=Lucida Console;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="524.15" y="615.85" width="10" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-9" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.miscellaneous.adapter;rotation=193;fontFamily=Lucida Console;" parent="1" vertex="1">
+                    <mxGeometry x="545.5699999999999" y="619.85" width="30" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-12" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Lucida Console;exitX=0.974;exitY=0.72;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=1;endSize=6;startSize=6;jumpSize=6;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="451.7800000000001" y="602.4499999999999" as="sourcePoint"/>
+                        <mxPoint x="473.15" y="606.85" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-10" value="Domain Rules" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Lucida Console;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="373.85999999999996" y="544.85" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-13" value="Domain" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontStyle=1;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="379.85999999999996" y="505.85" width="68" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-15" value="Application/Adapters" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontStyle=1;fontColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="334.09999999999997" y="459.85" width="159.51" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-17" value="External World" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="383.85999999999996" y="374.85" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-18" value="Http" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="163.68999999999997" y="502.85" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-19" value="Database" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="608.03" y="628.85" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="J82R_KNUIGllpc8dS4SY-25" value="External World" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Lucida Console;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="383.85999999999996" y="759.85" width="60" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

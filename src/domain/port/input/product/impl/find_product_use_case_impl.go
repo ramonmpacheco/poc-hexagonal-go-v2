@@ -1,6 +1,7 @@
-package productusecase
+package productusecaseimpl
 
 import (
+	productusecase "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/domain/port/input/product"
 	productdomain "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/domain/product"
 )
 
@@ -8,7 +9,7 @@ type findProductUseCaseImpl struct {
 	findProductData productdomain.FindProductDataOutputPort
 }
 
-func NewFindProductUseCaseImpl(findProductData productdomain.FindProductDataOutputPort) FindProductUseCase {
+func NewFindProductUseCaseImpl(findProductData productdomain.FindProductDataOutputPort) productusecase.FindProductUseCase {
 	return &findProductUseCaseImpl{
 		findProductData,
 	}

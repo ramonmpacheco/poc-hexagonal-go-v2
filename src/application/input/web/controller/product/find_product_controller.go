@@ -19,6 +19,11 @@ func NewFindProductController(findProductUseCase productusecase.FindProductUseCa
 
 func (fpc *findProductController) ById(c *gin.Context) {
 	id := c.Param("id")
-	product, _ := fpc.findProductUseCase.ById(id)
+	product, err := fpc.findProductUseCase.ById(id)
+
+	if err != nil {
+		c.JSON(http.StatusBadRequest, err.Error())
+		return
+	}
 	c.JSON(http.StatusOK, product)
 }
