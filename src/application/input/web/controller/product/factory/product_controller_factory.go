@@ -10,7 +10,7 @@ import (
 )
 
 func GetFindProductController() (productcontroller.IFindProductController, error) {
-	repository := productrepository.NewFindProductRepository(mongoclient.Client)
+	repository := productrepository.NewFindProductRepository(mongoclient.GetCollection("products"))
 	findProductUseCase := productusecaseimpl.NewFindProductUseCaseImpl(repository)
 	controller := productcontroller.NewFindProductController(findProductUseCase)
 

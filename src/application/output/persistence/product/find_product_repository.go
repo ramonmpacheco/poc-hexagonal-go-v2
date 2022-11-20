@@ -14,31 +14,29 @@ import (
 )
 
 type findProductRepository struct {
-	mongoClient *mongo.Client
+	mongoCollection *mongo.Collection
 }
 
-func NewFindProductRepository(mongoClient *mongo.Client) productdomain.FindProductDataOutputPort {
+func NewFindProductRepository(mongoClient *mongo.Collection) productdomain.FindProductDataOutputPort {
 	return &findProductRepository{
-		mongoClient: mongoClient,
+		mongoCollection: mongoClient,
 	}
 }
 
 func (fpr *findProductRepository) ById(product *productdomain.Product) error {
-	objId, _ := primitive.ObjectIDFromHex(product.ID)
-	filter := bson.D{{Key: "_id", Value: objId}}
+	id, _ := primitive.ObjectIDFromHex(product.ID)
+	filter := bson.D{{Key: "_id", Value: id}}
 
 	var producModel model.ProductModel
 
-	collection := fpr.mongoClient.Database("poc_hexagonal_db").Collection("products")
-
-	result := collection.FindOne(context.Background(), filter).Decode(&producModel)
-	if result == mongo.ErrNoDocuments {
-		log.Default().Println(result.Error())
-		return fmt.Errorf("no document found for id: %s", product.ID)
-	}
+	result := fpr.mongoCollection.FindOne(context.Background(), filter).Decode(&producModel)
 	if result != nil {
 		log.Default().Println(result.Error())
-		return fmt.Errorf("error trying to find document with id: %s", result.Error())
+		if result == mongo.ErrNoDocuments {
+			log.Default().Println(result.Error())
+			return fmt.Errorf("no document found for id: %s", product.ID)
+		}
+		return fmt.Errorf("error trying to find document with id: %s", product.ID)
 	}
 
 	copier.Copy(&product, &producModel)

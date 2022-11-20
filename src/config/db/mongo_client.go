@@ -72,3 +72,7 @@ func Close(client *mongo.Client, ctx context.Context,
 		}
 	}()
 }
+
+func GetCollection(name string) *mongo.Collection {
+	return Client.Database("poc_hexagonal_db").Collection(name)
+}
