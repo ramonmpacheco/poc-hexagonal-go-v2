@@ -19,16 +19,17 @@ const MONGO_INITDB_ROOT_USERNAME = "root"
 const MONGO_INITDB_ROOT_PASSWORD = "password"
 
 func Connect() {
-	pool, err := dockertest.NewPool("")
+	var err error
+	pool, err = dockertest.NewPool("")
 	if err != nil {
 		log.Fatalf("Could not connect to docker: %s", err)
 	}
 	log.Default().Println("starting conection with db")
 	environmentVariables := []string{
-		MONGO_INITDB_ROOT_USERNAME,
-		MONGO_INITDB_ROOT_PASSWORD,
+		"MONGO_INITDB_ROOT_USERNAME=" + MONGO_INITDB_ROOT_USERNAME,
+		"MONGO_INITDB_ROOT_PASSWORD=" + MONGO_INITDB_ROOT_PASSWORD,
 	}
-	resource := starContainerPool(pool, environmentVariables)
+	resource = starContainerPool(pool, environmentVariables)
 	conectToContainerPool(pool, resource)
 }
 
@@ -86,4 +87,8 @@ func Close() {
 	if err := Db.Disconnect(context.TODO()); err != nil {
 		panic(err)
 	}
+}
+
+func GetProductCollection() *mongo.Collection {
+	return Db.Database("poc_hexagonal_db").Collection("products")
 }
