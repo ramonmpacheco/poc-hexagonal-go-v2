@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/input/web/controller/converters"
 	productusecase "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/domain/port/input/product"
 )
 
@@ -25,5 +26,6 @@ func (fpc *findProductController) ById(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, err.Error())
 		return
 	}
-	c.JSON(http.StatusOK, product)
+	response := converters.ProductDomainToResponse(product)
+	c.JSON(http.StatusOK, response)
 }

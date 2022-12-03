@@ -2,7 +2,7 @@ schemas:
   Product:
     type: object
     properties:
-      _id:
+      id:
         type: string
         description: product id
         example: 637911e88e5647cccad9dc2c
