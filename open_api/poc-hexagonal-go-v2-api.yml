@@ -1,0 +1,26 @@
+openapi: "3.0.2"
+info:
+  title: Hexagonal Poof Of Concept
+  description: Hexagonal poc with GoLang and MongoDb
+  version: "1.0"
+servers:
+  - url: http://localhost:8080/hex-go/v1/
+    description: local
+paths:
+  /products/{id}:
+    parameters:
+      - name: id
+        in: path
+        schema:
+          type: string
+        example: 637911e88e5647cccad9dc2c
+        required: true
+    get:
+      tags:
+        - Products
+      summary: Find a product by id
+      responses:
+        "200":
+          $ref: "./product/responses.yml#/responses/SuccessWithProduct"
+        "400":
+          $ref: "./product/responses.yml#/responses/BadRequestProduct"

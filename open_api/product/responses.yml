@@ -1,0 +1,9 @@
+responses:
+  SuccessWithProduct:
+    description: Success
+    content:
+      application/json:
+        schema:
+          $ref: "schemas.yml#/schemas/Product"
+  BadRequestProduct:
+    description: Bad Request
