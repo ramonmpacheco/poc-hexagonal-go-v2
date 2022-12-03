@@ -12,16 +12,32 @@ type Routes struct {
 }
 
 func (r *Routes) LoadRoutes() (err error) {
+	r.Router.Use(CORSMiddleware())
 	rest := r.Router.Group("/hex-go")
-
-	addFindProductController(rest)
+	loadProductControllers(rest)
 	return
 }
 
-func addFindProductController(rest *gin.RouterGroup) {
-	findProductController, err := productcontrollerfactory.GetFindProductController()
+func loadProductControllers(rest *gin.RouterGroup) {
+	err := productcontrollerfactory.AddProductControllers(rest)
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
-	rest.GET("/v1/products/:id", findProductController.ById)
+
+}
+
+func CORSMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT")
+
+		if c.Request.Method == "OPTIONS" {
+			c.AbortWithStatus(204)
+			return
+		}
+
+		c.Next()
+	}
 }
