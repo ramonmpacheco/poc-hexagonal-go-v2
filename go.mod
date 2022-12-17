@@ -31,6 +31,7 @@ require (
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/go-cmp v0.5.5 // indirect
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510 // indirect
+	github.com/google/uuid v1.3.0
 	github.com/imdario/mergo v0.3.13 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
