@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"testing"
 
-	productrepository "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/application/output/persistence/product"
 	productdomain "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/domain/product"
 	"github.com/stretchr/testify/assert"
 	"go.mongodb.org/mongo-driver/bson"
@@ -19,7 +18,7 @@ func Test_Find_Product_By_Id(t *testing.T) {
 		var productCollection = mt.Coll
 		mt.AddMockResponses(mtest.CreateCursorResponse(0, "poc_hexagonal_db.products", mtest.FirstBatch))
 
-		repo := productrepository.NewFindProductRepository(productCollection)
+		repo := NewFindProductRepository(productCollection)
 		product := productdomain.Product{ID: "637911e88e5647cccad9dc2c"}
 		result := repo.ById(&product)
 
@@ -30,7 +29,7 @@ func Test_Find_Product_By_Id(t *testing.T) {
 		var productCollection = mt.Coll
 		mt.AddMockResponses(bson.D{{Key: "ok", Value: 0}})
 
-		repo := productrepository.NewFindProductRepository(productCollection)
+		repo := NewFindProductRepository(productCollection)
 		product := productdomain.Product{ID: "637911e88e5647cccad9dc2c"}
 		result := repo.ById(&product)
 
@@ -47,7 +46,7 @@ func Test_Find_Product_By_Id(t *testing.T) {
 			{Key: "name", Value: expectedProduct.Name},
 		}))
 
-		repo := productrepository.NewFindProductRepository(productCollection)
+		repo := NewFindProductRepository(productCollection)
 		product := productdomain.Product{ID: "637911e88e5647cccad9dc2c"}
 		result := repo.ById(&product)
 		assert.Nil(t, result)

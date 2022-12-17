@@ -5,14 +5,13 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	productusecaseimpl "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/domain/port/input/product/impl"
 	mocks_product "github.com/ramonmpacheco/poc-hexagonal-go-v2/src/test/mocks/product"
 	"github.com/stretchr/testify/assert"
 )
 
 func Test_Return_Error_When_Id_Is_Invalid(t *testing.T) {
 	mockFindProductData := mocks_product.NewMockFindProductDataOutputPort(nil)
-	productUseCaseImpl := productusecaseimpl.NewFindProductUseCaseImpl(mockFindProductData)
+	productUseCaseImpl := NewFindProductUseCaseImpl(mockFindProductData)
 
 	product, err := productUseCaseImpl.ById("abc")
 	assert.Nil(t, product)
@@ -21,7 +20,7 @@ func Test_Return_Error_When_Id_Is_Invalid(t *testing.T) {
 
 func Test_Forward_Error_When_Get_Error_From_Persistence(t *testing.T) {
 	mockFindProductData := mocks_product.NewMockFindProductDataOutputPort(gomock.NewController(t))
-	productUseCaseImpl := productusecaseimpl.NewFindProductUseCaseImpl(mockFindProductData)
+	productUseCaseImpl := NewFindProductUseCaseImpl(mockFindProductData)
 	errorReturn := errors.New("no document found for id: 6385e614198b9a59e233fe1f")
 	mockFindProductData.EXPECT().ById(gomock.Any()).Return(errorReturn)
 
